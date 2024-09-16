@@ -1,0 +1,651 @@
+/* Layout */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Reddit Sans", sans-serif;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  max-width: 1490px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* ---------------- Header ------------- */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  text-align: center;
+}
+
+.container-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 145px;
+}
+
+/*--------------- Menu de Pesquisa ---------------- */
+
+.menu-pesquisa {
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+#menu-mobile {
+  display: none;
+}
+
+.pesquisa {
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  border-radius: 27px;
+  width: 246px;
+  height: 46px;
+  border: none;
+}
+
+.pesquisa input {
+  border: none;
+  width: 122px;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+.lupa-icon {
+  width: 20px;
+  height: 20px;
+  height: 20px;
+  margin: 13px 13px;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo img {
+  width: 160px;
+  height: 55px;
+}
+
+.redes-sociais {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.atalhos-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Atalhos */
+.atalhos {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 10px 0;
+}
+
+.atalhos ul {
+  display: inline-flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 30px;
+}
+
+.atalhos ul li {
+  flex: 0 0 auto;
+}
+
+.atalhos ul li a {
+  display: block;
+  text-decoration: none;
+  color: #181818;
+  font-size: 18px;
+  letter-spacing: 0px;
+  padding: 5px 0;
+}
+
+.atalhos ul li a:hover {
+  color: #e31837;
+}
+
+/* ---------------------- Responsive ---------------------- */
+
+@media screen and (max-width: 768px) {
+  .container-header {
+    padding: 0;
+    width: 100%;
+  }
+
+  .barra-superior {
+    flex-direction: row-reverse;
+    padding: 20px 20px;
+  }
+
+  .menu-pesquisa {
+    flex-direction: row-reverse;
+    gap: 10px;
+  }
+
+  #menu-mobile {
+    display: inherit;
+    width: 20px;
+    height: 16px;
+  }
+
+  #menu-desktop {
+    display: none;
+  }
+
+  .menu-icon {
+    margin-right: 0;
+  }
+
+  .pesquisa {
+    width: 100%;
+    background-color: transparent;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+    input {
+      display: none;
+    }
+  }
+
+  .pesquisa input {
+    width: 100%;
+  }
+
+  .logo img {
+    width: 132px;
+    height: 44px;
+  }
+
+  .redes-sociais {
+    display: none;
+  }
+
+  .atalhos-container {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 100;
+    background-color: #ffffff;
+  }
+
+  .atalhos {
+    justify-content: flex-start;
+    padding: 10px 20px;
+  }
+
+  .atalhos ul {
+    gap: 20px;
+  }
+
+  .atalhos ul li a {
+    font-size: 16px;
+  }
+
+  .atalhos-container::after {
+    width: 30px;
+  }
+}
+
+/* ---------------------- Fim Responsive ------------------ */
+
+/* ------------------- Fim Header ----------------- */
+
+/* ---------------------------Barra-Vermelha--------------------------- */
+.breadcrumb {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #e31837;
+  margin-top: -5px;
+  justify-content: flex-start;
+  border-radius: 0px 0px 16px 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 132px;
+}
+
+.breadcrumb .home-icon {
+  width: 22px;
+  height: 18px;
+  margin-left: 145px;
+  margin-right: 10px;
+}
+
+.breadcrumb .seta-icon {
+  width: 5px;
+  height: 8px;
+  margin-right: 10px;
+}
+
+.breadcrumb {
+  font-size: 16px; /* Ajuste de acordo com a necessidade */
+}
+
+.breadcrumb-text {
+  color: #ffffff;
+  font-family: "Reddit Sans", sans-serif;
+  font-weight: bold;
+  font-size: 42px;
+  white-space: nowrap;
+}
+
+/* ------------ Responsive ------------ */
+
+@media screen and (max-width: 768px) {
+  .breadcrumb {
+    height: 60px;
+    top: 100px;
+    z-index: 90;
+  }
+
+  .breadcrumb .home-icon {
+    margin-left: 20px;
+  }
+
+  .breadcrumb .seta-icon {
+    margin-right: 5px;
+  }
+
+  .breadcrumb-text {
+    font-size: 24px;
+  }
+}
+
+/* -------------- Fim da Responsividade ----------------------- */
+
+/* --------------------------- Fim da Barra-Vermelha --------------------------- */
+
+main {
+  display: grid;
+  grid-template-rows: repeat(18, auto);
+  max-width: 970px;
+  margin: 0 auto;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------------------------- Banner --------------------- */
+.banner {
+  width: 970px;
+  height: 250px;
+  background-color: #f1f1f1;
+  margin: 24px auto;
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    display: none;
+  }
+}
+/* ---------------------------- Footer --------------------- */
+
+/* ----------------------- news --------------------- */
+
+.news {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.news-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.news-category {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #e31837;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.news-title {
+  font-size: 44px;
+  line-height: 48px;
+  color: #181818;
+  letter-spacing: 0.22px;
+}
+
+.news-description {
+  font-size: 22px;
+  line-height: 26px;
+  color: #181818;
+  margin-top: 12px;
+  font: normal normal normal 22px/30px "Reddit Sans", sans-serif;
+  letter-spacing: 0.22px;
+  color: #181818;
+}
+
+.paragrafo-alem {
+  letter-spacing: 0.22px;
+  color: #181818;
+}
+
+.autor-info {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.autor-miniatura {
+  width: 46px;
+  height: 46px;
+  background: transparent url("") 0% 0% no-repeat padding-box;
+  border: 1px solid #e31837;
+  border-radius: 23px;
+  margin-right: 15px;
+}
+
+.autor-detalhes {
+  display: flex;
+  gap: 5px;
+  font-size: 16px;
+  color: #161616;
+}
+
+.autor-texto {
+  font-weight: bold;
+  letter-spacing: 0px;
+  margin: 0;
+}
+
+/* Espaço sobre o autor e data */
+.autor {
+  display: flex;
+  align-items: center;
+  margin: 30px auto;
+}
+
+.autor-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.foto-autor {
+  width: 46px;
+  height: 46px;
+  background: transparent url("img/autor_miniatura.png") no-repeat center center;
+  border: 1px solid #e31837;
+  border-radius: 23px;
+  margin-bottom: 15px;
+}
+
+.info-autor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nome-autor {
+  font-family: "Reddit Sans", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #161616;
+  margin: 0;
+}
+
+/* Data e hora da postagem */
+.data-hora {
+  font-family: "Reddit Sans", sans-serif;
+  font-size: 14px;
+  color: #888888;
+}
+
+/* Botão de play específico */
+.botao-play {
+  width: 108px;
+}
+
+.icone-play {
+  width: 34px;
+  height: 34px;
+}
+
+.icone-google-news {
+  width: 24px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+/* Texto dos botões */
+.botao span {
+  letter-spacing: 0;
+  font: normal normal bold 16px/21px "Reddit Sans", sans-serif;
+  color: #161616;
+}
+
+.botao-play {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e31837;
+  border-radius: 25px;
+  height: 46px;
+  cursor: pointer;
+  gap: 5px;
+}
+
+/* Texto ao lado do ícone */
+.botao-play span {
+  letter-spacing: 0px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #161616;
+}
+
+.botao-play-container {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.botao-google-news {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #ff783e;
+  border-radius: 25px;
+  padding: 0 10px;
+  height: 46px;
+  cursor: pointer;
+
+  span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #161616;
+  }
+}
+
+#texto-ineditas-line{
+  display: none;
+}
+
+.texto-ineditas {
+  letter-spacing: 0.22px;
+  color: #181818;
+  margin: 10px 10px;
+}
+
+.mania-de-voce {
+  color: #e31837;
+  text-decoration: underline;
+}
+
+
+/* ---------------------- Responsive ---------------------- */
+
+@media screen and (max-width: 768px) {
+  .news {
+    padding: 0 20px;
+  }
+
+  .news-title {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .news-description {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .autor-info {
+    display: flex;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .autor-miniatura {
+    width: 36px;
+    height: 36px;
+  }
+
+  .autor-detalhes {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+  }
+
+  #autor-texto-dot {
+    display: none;
+  }
+
+
+  .autor-texto {
+    font-size: 14px;
+  }
+
+  .autor {
+    margin: 20px auto;
+  }
+
+  .autor-container {
+    margin-top: 20px;
+  }
+
+  .foto-autor {
+    width: 36px;
+    height: 36px;
+  }
+
+  .nome-autor {
+    font-size: 14px;
+  }
+
+  .data-hora {
+    font-size: 12px;
+  }
+
+  .botao-play {
+    width: 90px;
+  }
+
+  .icone-play {
+    width: 28px;
+    height: 28px;
+  }
+
+  .botao-play span {
+    font-size: 14px;
+  }
+
+  .botao-play-container {
+    margin-top: 5px;
+  }
+
+  .botao-google-news {
+    padding: 0 5px;
+  }
+
+  .botao-google-news span {
+    font-size: 14px;
+  }
+
+  #texto-ineditas-line{
+    display: flex;
+    background-color: #f0f0f0;
+    width: 100%;
+    height: 1px;
+    margin-top: 10px;
+  }
+
+  .texto-ineditas {
+    letter-spacing: 0.18px;
+    font-size: 19px;
+    margin: 10px 0;
+    text-align: left;
+  }
+}
+
+/* ---------------------- Fim news --------------------- */
